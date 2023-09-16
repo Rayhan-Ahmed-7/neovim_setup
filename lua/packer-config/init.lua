@@ -4,6 +4,7 @@ return require'packer'.startup(function()
     use 'nvim-tree/nvim-tree.lua'
     use "EdenEast/nightfox.nvim"
     use 'nvim-lualine/lualine.nvim'
-
+    
+    use 'neovim/nvim-lspconfig'
 end)
 
