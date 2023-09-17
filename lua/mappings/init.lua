@@ -18,4 +18,4 @@ vim.g.mapleader = ' '
 -- and to prevent this we use noremap true
 -- silent = true => suppresses the display of command execution messages.
 map('n','<leader>e',':NvimTreeToggle<CR>',opts)
-map('n','<leader>ef',':NvimTreeFocus<CR>',opts)
+map('n','<leader>f',':NvimTreeFocus<CR>',opts)
