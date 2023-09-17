@@ -3,6 +3,8 @@ return require'packer'.startup(function()
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-tree/nvim-tree.lua'
     use "EdenEast/nightfox.nvim"
+    use 'rcarriga/nvim-notify'
+    use 'romgrk/barbar.nvim'
     use 'nvim-lualine/lualine.nvim'
     
     use 'neovim/nvim-lspconfig'
