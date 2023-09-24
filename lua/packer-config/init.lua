@@ -14,6 +14,17 @@ return require'packer'.startup(function()
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
     use 'NvChad/nvim-colorizer.lua'
-    use('jose-elias-alvarez/null-ls.nvim')
+    use({
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+        require("null-ls").setup()
+    end,
+    requires = { "nvim-lua/plenary.nvim" },
+use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.3',
+-- or                            , branch = '0.1.x',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
+})
 end)
 

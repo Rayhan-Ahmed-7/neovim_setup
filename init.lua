@@ -35,4 +35,5 @@ filetypes = { "*" },
       -- all the sub-options of filetypes apply to buftypes
       buftypes = {},
   }
-require("null-ls")
+--
+require("null-ls-config.null_ls")
