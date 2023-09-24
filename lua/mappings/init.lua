@@ -17,11 +17,12 @@ vim.g.mapleader = ' '
 -- c => a => b 
 -- and to prevent this we use noremap true
 -- silent = true => suppresses the display of command execution messages.
-map('n','<leader>e',':NvimTreeToggle<CR>',opts)
+map('n','<C-n>',':NvimTreeToggle<CR>',opts)
+map('n','<leader>e',':NvimTreeFocus<CR>',opts)
 
 -- Move to previous/next
-map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
+map('n', '<S-Tab>', '<Cmd>BufferPrevious<CR>', opts)
+map('n', '<Tab>', '<Cmd>BufferNext<CR>', opts)
 -- Re-order to previous/next
 map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
 map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
