@@ -47,3 +47,14 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- Toggle floating terminal
+-- double square brackets [[...]] are used in Neovim's Lua configuration to create multi-line strings
+map('n', '<leader>tf', [[:lua require("nvterm.terminal").toggle "float"<CR>]], { noremap = true })
+
+-- Toggle horizontal terminal
+map('n', '<leader>th', [[:lua require("nvterm.terminal").toggle "horizontal"<CR>]], { noremap = true })
+
+-- Toggle vertical terminal
+map('n', '<leader>tv', [[:lua require("nvterm.terminal").toggle "vertical"<CR>]], { noremap = true })
+

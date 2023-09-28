@@ -4,6 +4,7 @@ require("nvim-lsp-installer").setup {}
 require("nvim-tree-config")
 require("lualine-config")
 require("tab_bar-config")
+require("nv-terminal-config")
 require("lsp-config.language-servers")
 require("lsp-config.lsp-auto-com")
 require("packer-config")
@@ -24,7 +25,7 @@ filetypes = { "*" },
         mode = "background", -- Set the display mode.
         -- Available methods are false / true / "normal" / "lsp" / "both"
         -- True is same as normal
-        tailwind = false, -- Enable tailwind colors
+        tailwind = true, -- Enable tailwind colors
         -- parsers can contain values used in |user_default_options|
         sass = { enable = false, parsers = { "css" }, }, -- Enable sass colors
         virtualtext = "■",

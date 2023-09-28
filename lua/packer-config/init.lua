@@ -6,6 +6,9 @@ return require'packer'.startup(function()
     use 'rcarriga/nvim-notify'
     use 'nvim-lualine/lualine.nvim'
     use 'romgrk/barbar.nvim'
+
+    -- nvterm 
+    use "NvChad/nvterm"
     
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer' -- To install language servers
