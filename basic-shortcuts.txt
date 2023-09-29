@@ -1,0 +1,21 @@
+-- NORMAL MODE SHORTCUTS -- 
+k => move up 
+j => move down 
+h => move left 
+l => move right
+
+o => insert a line after the current line. 
+shipt + o => insert a line before the current line.
+
+shipt + $ => go to the end of the line.
+shipt + ^ => go to the begining of the line.
+
+b => go to begining of word.
+e => go to end of word.
+
+yy => copies the current line.
+p => pastes the line after the current line.
+shipt + p => pastes the line before the current line.
+
+-- TO COME BACK FROM TERMINAL MODE --
+ctrl + \ then ctrl + n => terminal to normal mode.
