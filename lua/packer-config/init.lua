@@ -7,8 +7,8 @@ return require'packer'.startup(function()
     use 'nvim-lualine/lualine.nvim'
     use 'romgrk/barbar.nvim'
 
-    -- nvterm 
-    use "NvChad/nvterm"
+    -- nvim terminal setup 
+    use "akinsho/toggleterm.nvim"
     
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer' -- To install language servers
