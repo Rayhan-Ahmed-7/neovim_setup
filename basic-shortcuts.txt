@@ -1,3 +1,11 @@
+w => to save.
+q => to quit.
+q! => force quit without saving.
+wq => save and quit.
+qa => close all buffer.
+qa! => force close all buffer without saving.
+wqa => save and quit all buffer.
+
 -- NORMAL MODE SHORTCUTS -- 
 k => move up 
 j => move down 
