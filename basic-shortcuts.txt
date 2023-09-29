@@ -5,17 +5,48 @@ h => move left
 l => move right
 
 o => insert a line after the current line. 
-shipt + o => insert a line before the current line.
+shift + o => insert a line before the current line.
 
-shipt + $ => go to the end of the line.
-shipt + ^ => go to the begining of the line.
+shift + $ => go to the end of the line.
+shift + ^ => go to the begining of the line.
 
 b => go to begining of word.
 e => go to end of word.
 
+r => replace the current character.
+d => delete the current character/characters.
+x => delete the current character/characters.
+s => cut selected characters and go to insert mode.
+
 yy => copies the current line.
 p => pastes the line after the current line.
-shipt + p => pastes the line before the current line.
+shift + p => pastes the line before the current line.
 
 -- TO COME BACK FROM TERMINAL MODE --
 ctrl + \ then ctrl + n => terminal to normal mode.
+
+-- OPEN NEW WINDOW --
+ctrl + w + s => splits the window horizontally. 
+ctrl + w + v => splits the window vertically. 
+
+-- NAVIGATE THROUGH WINDOWS --
+ctrl + w + j => move to the window below.
+ctrl + w + k => move to the window up.
+ctrl + w + h => move to the window left.
+ctrl + w + l => move to the window right.
+
+-- INCREASE WINDOW HEIGHT/WIDTH --
+ctrl + w + + => increase window height.
+ctrl + w + - => decrease window height.
+ctrl + w + > => increase window width.
+ctrl + w + < => decrease window width.
+
+ctrl + w + = => make all window equal size.
+ctrl + w + _ => maximize the height of current window.
+ctrl + w + | => maximize the width of current window.
+
+-- CLOSE WINDOW --
+ctrl + w + c => close the current window.
+ctrl + w + o => close the windows except current window.
+ctrl + w + x => swap the current window with the next window.
+
