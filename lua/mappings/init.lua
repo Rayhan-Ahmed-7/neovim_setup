@@ -20,16 +20,20 @@ vim.g.mapleader = ' '
 map('n','<C-n>',':NvimTreeToggle<CR>',opts)
 map('n','<leader>e',':NvimTreeFocus<CR>',opts)
 
--- Define a custom <Plug> mapping
-vim.api.nvim_set_keymap('n', '<Plug>MyFocusLeft', ':wincmd h<CR>', opts)
-vim.api.nvim_set_keymap('n', '<Plug>MyFocusRight', ':wincmd l<CR>', opts)
-vim.api.nvim_set_keymap('n', '<Plug>MyFocusDown', ':wincmd j<CR>', opts)
-vim.api.nvim_set_keymap('n', '<Plug>MyFocusUp', ':wincmd k<CR>', opts)
+-- Better window navigation
+map("n", "<C-h>", "<C-w>h", opts)
+map("n", "<C-j>", "<C-w>j", opts)
+map("n", "<C-k>", "<C-w>k", opts)
+map("n", "<C-l>", "<C-w>l", opts)
+map("n", "<leader>x", "<C-w>c", opts)
+map("n", "<leader>h", "<C-w>s", opts)
+map("n", "<leader>v", "<C-w>v", opts)
 
-map('n','<leader>wh','<Plug>MyFocusLeft',opts)
-map('n','<leader>wl','<Plug>MyFocusRight',opts)
-map('n','<leader>wj','<Plug>MyFocusDown',opts)
-map('n','<leader>wk','<Plug>MyFocusUp',opts)
+-- Resize with arrows
+map("n", "<C-Up>", ":resize +2<CR>", opts)
+map("n", "<C-Down>", ":resize -2<CR>", opts)
+map("n", "<C-Left>", ":vertical resize +2<CR>", opts)
+map("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
 -- Move to previous/next
 map('n', '<S-Tab>', '<Cmd>BufferPrevious<CR>', opts)
@@ -60,5 +64,14 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- double square brackets [[...]] are used in Neovim's Lua configuration to create multi-line strings
+
+-- comment --
+map('n','<C-/>','<gcc>',opts)
+
+-- Move text up and down
+map("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+map("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+
+
 
 

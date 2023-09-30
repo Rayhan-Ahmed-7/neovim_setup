@@ -6,7 +6,12 @@ return require'packer'.startup(function()
     use 'rcarriga/nvim-notify'
     use 'nvim-lualine/lualine.nvim'
     use 'romgrk/barbar.nvim'
-
+    use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
     -- nvim terminal setup 
     use "akinsho/toggleterm.nvim"
     
