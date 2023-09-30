@@ -20,6 +20,17 @@ vim.g.mapleader = ' '
 map('n','<C-n>',':NvimTreeToggle<CR>',opts)
 map('n','<leader>e',':NvimTreeFocus<CR>',opts)
 
+-- Define a custom <Plug> mapping
+vim.api.nvim_set_keymap('n', '<Plug>MyFocusLeft', ':wincmd h<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Plug>MyFocusRight', ':wincmd l<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Plug>MyFocusDown', ':wincmd j<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Plug>MyFocusUp', ':wincmd k<CR>', opts)
+
+map('n','<leader>wh','<Plug>MyFocusLeft',opts)
+map('n','<leader>wl','<Plug>MyFocusRight',opts)
+map('n','<leader>wj','<Plug>MyFocusDown',opts)
+map('n','<leader>wk','<Plug>MyFocusUp',opts)
+
 -- Move to previous/next
 map('n', '<S-Tab>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<Tab>', '<Cmd>BufferNext<CR>', opts)
@@ -48,13 +59,6 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
--- Toggle floating terminal
 -- double square brackets [[...]] are used in Neovim's Lua configuration to create multi-line strings
-map('n', '<leader>tf', [[:lua require("nvterm.terminal").toggle "float"<CR>]], { noremap = true })
 
--- Toggle horizontal terminal
-map('n', '<leader>th', [[:lua require("nvterm.terminal").toggle "horizontal"<CR>]], { noremap = true })
-
--- Toggle vertical terminal
-map('n', '<leader>tv', [[:lua require("nvterm.terminal").toggle "vertical"<CR>]], { noremap = true })
 
