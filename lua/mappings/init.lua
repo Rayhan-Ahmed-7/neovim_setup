@@ -66,7 +66,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- double square brackets [[...]] are used in Neovim's Lua configuration to create multi-line strings
 
 -- comment --
-map('n','<C-/>','<gcc>',opts)
+map('n','<C-/>',"gcc",opts)
 
 -- Move text up and down
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
