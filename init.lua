@@ -38,3 +38,4 @@ filetypes = { "*" },
   }
 --
 require("null-ls-config.null_ls")
+require("ibl").setup()

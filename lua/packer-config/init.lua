@@ -11,7 +11,8 @@ return require'packer'.startup(function()
     config = function()
         require('Comment').setup()
     end
-}
+    }
+    use "lukas-reineke/indent-blankline.nvim"
     -- nvim terminal setup 
     use "akinsho/toggleterm.nvim"
     
