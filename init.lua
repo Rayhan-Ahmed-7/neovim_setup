@@ -1,3 +1,4 @@
+require("packer-config")
 require("settings")
 require("colorschemes-config.nightfox")
 require("nvim-lsp-installer").setup {}
@@ -7,7 +8,6 @@ require("tab_bar-config")
 require("terminal-config")
 require("lsp-config.language-servers")
 require("lsp-config.lsp-auto-com")
-require("packer-config")
 require("mappings")
 require("colorizer").setup {
 filetypes = { "*" },
