@@ -19,7 +19,8 @@ vim.g.mapleader = ' '
 -- silent = true => suppresses the display of command execution messages.
 map('n','<C-n>',':NvimTreeToggle<CR>',opts)
 map('n','<leader>e',':NvimTreeFocus<CR>',opts)
-
+-- close nvim --
+map('n','<leader>q',':wqa<CR>',opts)
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
