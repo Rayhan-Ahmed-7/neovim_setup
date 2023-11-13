@@ -72,6 +72,7 @@ map('n','<C-/>',"gcc",opts)
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
-
+-- save file --
+map("i","<C-s>","<Esc>:w<CR>a",opts)
 
 

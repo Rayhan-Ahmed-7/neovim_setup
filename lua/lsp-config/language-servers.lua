@@ -38,7 +38,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'pyright', 'html', 'tsserver', 'tailwindcss','jdtls','dartls' }
+local servers = { 'pyright', 'html','cssls', 'tsserver', 'tailwindcss','jdtls','dartls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = on_attach,
