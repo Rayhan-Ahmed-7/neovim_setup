@@ -20,7 +20,7 @@ vim.g.mapleader = ' '
 map('n','<C-n>',':NvimTreeToggle<CR>',opts)
 map('n','<leader>e',':NvimTreeFocus<CR>',opts)
 -- close nvim --
-map('n','<leader>q',':wqa<CR>',opts)
+map('n','<C-q>',':wqa<CR>',opts)
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
