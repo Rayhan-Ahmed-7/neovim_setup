@@ -28,6 +28,7 @@ return require'packer'.startup(function()
 	-- install jsregexp (optional!:).
 	run = "make install_jsregexp"
     })
+    use "barrett-ruth/live-server.nvim"
     use "rafamadriz/friendly-snippets"
     use 'NvChad/nvim-colorizer.lua'
     use({

@@ -26,8 +26,11 @@ map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
+-- close window
 map("n", "<leader>x", "<C-w>c", opts)
+-- vertical split window 
 map("n", "<leader>h", "<C-w>s", opts)
+-- horizontal split window 
 map("n", "<leader>v", "<C-w>v", opts)
 
 -- Resize with arrows
