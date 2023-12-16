@@ -23,6 +23,7 @@ set.termguicolors = true
 set.relativenumber = true
 set.cursorline = true
 
-vim.cmd("set clipboard=unnamedplus")
+-- Enable clipboard support
+vim.o.clipboard = 'unnamedplus'
 
 set.hidden = true
