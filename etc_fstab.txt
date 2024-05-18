@@ -1,0 +1,7 @@
+ my mounted lists 
+UUID=9CD236B2D236908E /home/rayhan/mnt/c    ntfs  defaults 0 2
+UUID=E47CFBA57CFB7122 /home/rayhan/mnt/d    ntfs  defaults 0 2
+UUID=3A9414089413C573 /home/rayhan/mnt/e    ntfs  defaults 0 2
+UUID=48BC0D30BC0D19D8 /home/rayhan/mnt/f    ntfs  defaults 0 2
+UUID=342AFB742AFB318A /home/rayhan/mnt/g    ntfs  defaults 0 2
+
