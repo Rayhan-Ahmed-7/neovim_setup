@@ -29,15 +29,15 @@ map("n", "<C-l>", "<C-w>l", opts)
 -- close window
 map("n", "<leader>x", "<C-w>c", opts)
 -- vertical split window 
-map("n", "<leader>h", "<C-w>s", opts)
+map("n", "<leader>sx", "<C-w>s", opts)
 -- horizontal split window 
-map("n", "<leader>v", "<C-w>v", opts)
+map("n", "<leader>sy", "<C-w>v", opts)
 
 -- Resize with arrows
-map("n", "<C-Up>", ":resize +2<CR>", opts)
-map("n", "<C-Down>", ":resize -2<CR>", opts)
-map("n", "<C-Left>", ":vertical resize +2<CR>", opts)
-map("n", "<C-Right>", ":vertical resize -2<CR>", opts)
+map("n", "<leader>k", ":resize +2<CR>", opts)
+map("n", "<leader>j", ":resize -2<CR>", opts)
+map("n", "<leader>l", ":vertical resize +2<CR>", opts)
+map("n", "<leader>h", ":vertical resize -2<CR>", opts)
 
 -- Move to previous/next
 map('n', '<S-Tab>', '<Cmd>BufferPrevious<CR>', opts)
