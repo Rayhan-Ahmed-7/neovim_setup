@@ -24,6 +24,5 @@ set.relativenumber = true
 set.cursorline = true
 
 -- Enable clipboard support
-vim.o.clipboard = 'unnamedplus'
-
+vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
 set.hidden = true
