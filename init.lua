@@ -1,4 +1,4 @@
-require("packer-config")
+require("config.lazy")
 require("settings")
 require("colorschemes-config.nightfox")
 require("nvim-lsp-installer").setup {}
