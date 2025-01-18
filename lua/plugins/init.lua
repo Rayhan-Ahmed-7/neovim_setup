@@ -51,7 +51,7 @@ return {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
     opts = function()
-      return require "nvchad.configs.nvimtree"
+      return require "configs.nvimtree"
     end,
   },
 
@@ -78,7 +78,7 @@ return {
     "lewis6991/gitsigns.nvim",
     event = "User FilePost",
     opts = function()
-      return require "nvchad.configs.gitsigns"
+      return require "configs.gitsigns"
     end,
   },
 
@@ -87,7 +87,7 @@ return {
     "williamboman/mason.nvim",
     cmd = { "Mason", "MasonInstall", "MasonUpdate" },
     opts = function()
-      return require "nvchad.configs.mason"
+      return require "configs.mason"
     end,
   },
 
@@ -95,7 +95,7 @@ return {
     "neovim/nvim-lspconfig",
     event = "User FilePost",
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
+      require("configs.lspconfig").defaults()
     end,
   },
 
@@ -111,7 +111,7 @@ return {
         opts = { history = true, updateevents = "TextChanged,TextChangedI" },
         config = function(_, opts)
           require("luasnip").config.set_config(opts)
-          require "nvchad.configs.luasnip"
+          require "configs.luasnip"
         end,
       },
 
@@ -141,7 +141,7 @@ return {
       },
     },
     opts = function()
-      return require "nvchad.configs.cmp"
+      return require "configs.cmp"
     end,
   },
 
@@ -150,7 +150,7 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     cmd = "Telescope",
     opts = function()
-      return require "nvchad.configs.telescope"
+      return require "configs.telescope"
     end,
   },
 
@@ -160,7 +160,7 @@ return {
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
     opts = function()
-      return require "nvchad.configs.treesitter"
+      return require "configs.treesitter"
     end,
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
