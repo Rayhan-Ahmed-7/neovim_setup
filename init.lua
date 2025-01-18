@@ -7,7 +7,7 @@ local api = vim.api
 local config = require "nvconfig"
 local new_cmd = api.nvim_create_user_command
 
-vim.o.statusline = "%!v:lua.require('config.stl" .. config.ui.statusline.theme .. "')()"
+vim.o.statusline = "%!v:lua.require('configs.stl.default')()"
 
 if config.ui.tabufline.enabled then
   require "nvchad.tabufline.lazyload"
@@ -18,7 +18,7 @@ new_cmd("Nvdash", function()
   if vim.g.nvdash_displayed then
     require("nvchad.tabufline").close_buffer()
   else
-    require("nvchad.nvdash").open()
+    require("configs.nvdash").open()
   end
 end, {})
 
@@ -38,7 +38,7 @@ vim.schedule(function()
     local bufname = api.nvim_buf_get_name(0)
 
     if bufname == "" and no_buf_content then
-      require("nvchad.nvdash").open()
+      require("configs.nvdash").open()
     end
   end
 

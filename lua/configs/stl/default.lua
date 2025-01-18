@@ -1,6 +1,6 @@
 local config = require("nvconfig").ui.statusline
 local sep_style = config.separator_style
-local utils = require "stl.utils"
+local utils = require "configs.stl.utils"
 
 local sep_icons = utils.separators
 local separators = (type(sep_style) == "table" and sep_style) or sep_icons[sep_style]
