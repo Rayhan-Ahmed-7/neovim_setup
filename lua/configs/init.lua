@@ -5,13 +5,13 @@ local new_cmd = api.nvim_create_user_command
 vim.o.statusline = "%!v:lua.require('configs.stl." .. config.ui.statusline.theme .. "')()"
 
 if config.ui.tabufline.enabled then
-  require "nvchad.tabufline.lazyload"
+  require "tabufline.lazyload"
 end
 
 -- Command to toggle NvDash
 new_cmd("Nvdash", function()
   if vim.g.nvdash_displayed then
-    require("nvchad.tabufline").close_buffer()
+    require("tabufline").close_buffer()
   else
     require("configs.nvdash").open()
   end

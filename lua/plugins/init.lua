@@ -141,7 +141,7 @@ return {
       },
     },
     opts = function()
-      return require "configs.cmp"
+      return require "cmp"
     end,
   },
 
