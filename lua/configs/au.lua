@@ -1,16 +1,21 @@
 local api = vim.api
 local autocmd = vim.api.nvim_create_autocmd
 local config = require "startup"
-
+print("Failed to load startup:", config.nvdash)
 -- load nvdash only on empty file
-if config.nvdash.load_on_startup then
-  local buf_lines = api.nvim_buf_get_lines(0, 0, 1, false)
-  local no_buf_content = api.nvim_buf_line_count(0) == 1 and buf_lines[1] == ""
-  local bufname = api.nvim_buf_get_name(0)
+if config.nvdash and config.nvdash.load_on_startup then
+    local status, nvdash = pcall(require, "configs.nvdash")
+    if status then
+        local buf_lines = api.nvim_buf_get_lines(0, 0, 1, false)
+        local no_buf_content = api.nvim_buf_line_count(0) == 1 and buf_lines[1] == ""
+        local bufname = api.nvim_buf_get_name(0)
 
-  if bufname == "" and no_buf_content then
-    require("nvdash").open()
-  end
+        if bufname == "" and no_buf_content then
+            nvdash.open()
+        end
+    else
+        print("Failed to load nvdash:", nvdash)
+    end
 end
 
 if config.lsp.signature then
@@ -42,7 +47,7 @@ autocmd("BufWritePost", {
     local app_name = vim.env.NVIM_APPNAME and vim.env.NVIM_APPNAME or "nvim"
     local module = string.gsub(fp, "^.*/" .. app_name .. "/lua/", ""):gsub("/", ".")
 
-    require("utils").reload(module)
+    require("configs.utils").reload(module)
     -- vim.cmd("redraw!")
   end,
 })
@@ -51,8 +56,13 @@ vim.api.nvim_create_user_command("MasonInstallAll", function()
   require("mason").install_all()
 end, {})
 
-if config.colorify.enabled then
-  require("nvchad.colorify").run()
+if config.colorify and config.colorify.enabled then
+    local status, colorify = pcall(require, "configs.colorify")
+    if status and colorify.run then
+        colorify.run()
+    else
+        print("Failed to load or execute colorify module:", colorify)
+    end
 end
 
 local dir = vim.fn.stdpath "data" .. "/nvnotify"

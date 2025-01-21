@@ -2,9 +2,9 @@ local M = {}
 local api = vim.api
 local fn = vim.fn
 
-dofile(vim.g.base46_cache .. "nvdash")
+--dofile(vim.g.base46_cache .. "nvdash")
 
-local config = require("startup.lua").ui.nvdash
+local config = require("startup").ui.nvdash
 
 local headerAscii = config.header
 local emmptyLine = string.rep(" ", vim.fn.strwidth(headerAscii[1]))

@@ -4,10 +4,10 @@ local g = vim.g
 
 dofile(vim.g.base46_cache .. "tbline")
 
-local txt = require("tabufline.utils").txt
-local btn = require("tabufline.utils").btn
+local txt = require("configs.tabufline.utils").txt
+local btn = require("configs.tabufline.utils").btn
 local strep = string.rep
-local style_buf = require("tabufline.utils").style_buf
+local style_buf = require("configs.tabufline.utils").style_buf
 local cur_buf = api.nvim_get_current_buf
 local opts = require("startup").ui.tabufline
 
