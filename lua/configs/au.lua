@@ -22,7 +22,7 @@ if config.lsp.signature then
         if client then
           local signatureProvider = client.server_capabilities.signatureHelpProvider
           if signatureProvider and signatureProvider.triggerCharacters then
-            require("nvchad.lsp.signature").setup(client, args.buf)
+            require("configs.lsp.signature").setup(client, args.buf)
           end
         end
       end)

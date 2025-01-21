@@ -14,7 +14,7 @@ local pos_data = {
   ["bo vsp"] = { resize = "width", area = "columns" },
 }
 
-local nvconfig = require "nvconfig"
+local nvconfig = require "startup"
 local config = nvconfig.term or nvconfig.ui.term
 
 -- used for initially resizing terms
