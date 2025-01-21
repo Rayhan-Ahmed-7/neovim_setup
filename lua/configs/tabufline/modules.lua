@@ -2,7 +2,7 @@ local api = vim.api
 local fn = vim.fn
 local g = vim.g
 
-dofile(vim.g.base46_cache .. "tbline")
+--dofile(vim.g.base46_cache .. "tbline")
 
 local txt = require("configs.tabufline.utils").txt
 local btn = require("configs.tabufline.utils").btn
